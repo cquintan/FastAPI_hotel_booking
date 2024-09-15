@@ -32,7 +32,7 @@ app = FastAPI(
 
 
 if settings.MODE != "TEST":
-    # Подключение Sentry для мониторинга ошибок
+    # Подключение Sentry для мониторинга ошибок. Лучше выключать на период локального тестирования
     sentry_sdk.init(
         dsn=settings.SENTRY_DSN,
         traces_sample_rate=1.0,
